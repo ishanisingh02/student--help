@@ -1,0 +1,165 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions for background and text color */
+}
+
+html, body {
+  height: 100%; /* Ensure body takes full height */
+}
+
+.calendar-container {
+  width: 100vw; /* Full width of the viewport */
+  height: 100vh; /* Full height of the viewport */
+  background-color: #f8f9fa;
+  color: #343a40;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  overflow: hidden; /* Prevent overflow */
+}
+
+.calendar-header {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.calendar-header button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.calendar-header button:hover {
+  background-color: #0056b3;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7 columns for the days of the week */
+  gap: 15px; /* Space between days */
+  width: 100%;
+  flex-grow: 1; /* Allow the grid to grow and fill available space */
+  overflow-y: auto; /* Enable vertical scrolling for the calendar grid */
+}
+
+.calendar-day {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px; /* Rounded corners */
+  text-align: center;
+  cursor: pointer;
+  padding: 20px; /* Increased padding */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  height: 120px; /* Fixed height for uniformity */
+}
+
+.calendar-day:hover {
+  background-color: #e9ecef;
+  transform: scale(1.05);
+}
+
+/* Task List Styles */
+.tasks-list {
+  margin-top: 10px;
+  padding: 0;
+  list-style: none;
+  max-height: 70px; /* Limit the height of the task list */
+  overflow-y: auto; /* Enable scrolling if tasks exceed the box size */
+}
+
+.tasks-list li {
+  background-color: #007bff;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+/* Task Input Styles */
+.task-input-container {
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.task-input-container h3 {
+  margin-bottom: 10px;
+  color: #343a40;
+}
+
+.task-input-container input {
+  width: calc(100% - 90px);
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.task-input-container button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.task-input-container button:hover {
+  background-color: #218838;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: #495057; /* Background color for dark mode */
+  color: #f8f9fa; /* Text color for dark mode */
+}
+
+.dark-mode .calendar-container {
+  background-color: #495057; /* Background color for the calendar */
+}
+
+.dark-mode .calendar-header button {
+  background-color: #1a73e8; /* Button color in dark mode */
+}
+
+.dark-mode .calendar-day {
+  background-color: #343a40; /* Day boxes color in dark mode */
+  border-color: #6c757d; /* Border color for day boxes */
+}
+
+.dark-mode .calendar-day:hover {
+  background-color: #495057; /* Hover color for day boxes */
+}
+
+.dark-mode .tasks-list li {
+  background-color: #ffc107; /* Yellow background for tasks */
+  color: #343a40;
+}
+
+.dark-mode .task-input-container {
+  background-color: #343a40; /* Background for task input container */
+}
+
+.dark-mode .task-input-container input {
+  background-color: #495057; /* Input field color in dark mode */
+  color: #f8f9fa; /* Input text color in dark mode */
+}

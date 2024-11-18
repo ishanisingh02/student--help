@@ -1,0 +1,106 @@
+/* Default light theme */
+:root {
+    --bg-color: #f0f0f0;
+    --container-bg-color: #ffffff;
+    --text-color: #34495e;
+    --workshop-card-bg: #ffffff;
+    --workshop-card-hover: #e8f5e9; /* Light green hover */
+    --video-card-bg: #ffffff;
+    --video-card-hover: #e3f2fd; /* Light blue hover */
+}
+
+/* Dark theme */
+[data-theme='dark'] {
+    --bg-color: #2c3e50;
+    --container-bg-color: #34495e;
+    --text-color: #ecf0f1;
+    --workshop-card-bg: #495057; /* Darker card background */
+    --workshop-card-hover: #6c757d; /* Darker hover */
+    --video-card-bg: #495057; /* Darker card background */
+    --video-card-hover: #6c757d; /* Darker hover */
+}
+
+body {
+    margin: 0; /* Reset default body margin */
+    height: 100vh; /* Full height of the viewport */
+    background-color: var(--bg-color);
+}
+
+.workshops-container {
+    padding: 20px;
+    width: 90%; /* Cover 90% of the width */
+    height: 90vh; /* Cover 90% of the height */
+    margin: 0 auto; /* Center horizontally */
+    background-color: var(--container-bg-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Enable scrolling if content overflows */
+    display: flex; /* Use flexbox to align items */
+    flex-direction: column; /* Stack items vertically */
+}
+
+h1 {
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.workshops-list,
+.videos-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-grow: 1; /* Allow the list to take available space */
+}
+
+.workshop-card,
+.video-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--workshop-card-bg);
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.workshop-card:hover {
+    background-color: var(--workshop-card-hover);
+}
+
+.video-card:hover {
+    background-color: var(--video-card-hover);
+}
+
+.workshop-card h2,
+.video-card h2 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.workshop-card p,
+.video-card a {
+    font-size: 1rem;
+    color: #555;
+}
+
+.video-card a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.video-card a:hover {
+    text-decoration: underline;
+}
+
+/* Added some responsive styling */
+@media (max-width: 600px) {
+    .workshop-card,
+    .video-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

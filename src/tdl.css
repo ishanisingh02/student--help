@@ -1,0 +1,154 @@
+/* General Styles */
+body.dark-mode {
+    background-color: #121212; /* Dark background for body */
+    color: #ffffff; /* Light text color */
+    font-family: 'Arial', sans-serif; /* Font family for body */
+}
+
+.app {
+    min-height: 100vh; /* Ensure app covers full height */
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    background-color: inherit; /* Inherit background color from body */
+    color: inherit; /* Inherit text color from body */
+    padding: 20px; /* Add padding around the app */
+}
+
+.mode-switch {
+    position: absolute; /* Keep toggle button at top right */
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px; /* Padding for button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff; /* Primary button color */
+    color: #fff; /* White text */
+    transition: background-color 0.3s; /* Smooth color transition */
+}
+
+.mode-switch:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.todo-container {
+    max-width: 600px; /* Limit max width for container */
+    width: 100%; /* Make it responsive */
+    background-color: #f0f0f0; /* Default background color for light mode */
+    color: #000; /* Default text color for light mode */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px; /* Padding inside container */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for color change */
+}
+
+body.dark-mode .todo-container {
+    background-color: #2c2c2c; /* Background color for dark mode */
+    color: #ffffff; /* Text color for dark mode */
+}
+
+.header {
+    display: flex; /* Flexbox for header */
+    justify-content: center; /* Center the header */
+    align-items: center; /* Align items vertically */
+    margin-bottom: 20px; /* Space below header */
+}
+
+h1 {
+    font-size: 2rem; /* Header font size */
+    text-align: center; /* Center header text */
+}
+
+/* Input Group Styles */
+.input-group {
+    display: flex; /* Flexbox for input group */
+    gap: 10px; /* Space between input and button */
+    margin-bottom: 20px; /* Space below input group */
+}
+
+input[type='text'] {
+    flex: 1; /* Input takes remaining space */
+    padding: 10px; /* Inner padding for input */
+    border: 1px solid #ccc; /* Light border color */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Font size */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+input[type='text']:focus {
+    border-color: #007bff; /* Border color on focus */
+}
+
+/* Button Styles */
+button {
+    padding: 10px 15px; /* Padding for buttons */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1rem; /* Font size */
+}
+
+/* Add Button Styles */
+.add-button {
+    background-color: #28a745; /* Green color for add button */
+    color: #fff; /* White text */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.add-button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Task List Styles */
+.task-list {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+}
+
+.task-list li {
+    display: flex; /* Flexbox for task items */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Align items vertically */
+    margin: 10px 0; /* Space between tasks */
+    padding: 10px; /* Padding for list items */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for background */
+}
+
+.task-list li:hover {
+    background-color: #f1f1f1; /* Light gray background on hover */
+}
+
+.task-list li span {
+    flex: 1; /* Allow text to take available space */
+}
+
+/* Edit Button Styles */
+.edit-button {
+    background-color: #28a745; /* Green color for edit buttons */
+    color: #fff; /* White text */
+    border: none; /* Remove border */
+    padding: 5px 10px; /* Padding for edit button */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.edit-button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Completed Task Styles */
+.completed {
+    text-decoration: line-through; /* Strike-through for completed tasks */
+    color: #888; /* Gray color for completed tasks */
+}
+
+/* Congrats Message Styles */
+.congrats-message {
+    margin-top: 20px; /* Space above message */
+    font-size: 1.2rem; /* Font size for message */
+    color: #28a745; /* Green color for the congratulatory message */
+    text-align: center; /* Center the text */
+}

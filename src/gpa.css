@@ -1,0 +1,146 @@
+/* Base styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.gpa-calculator-container {
+  width: 90%;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f7f7f7; /* Light mode background */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #007bff; /* Default heading color */
+  margin-bottom: 20px;
+}
+
+.gpa-form {
+  margin-bottom: 20px;
+}
+
+.subject-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.subject-row input {
+  width: 45%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.subject-row button {
+  padding: 10px 15px;
+  background-color: #dc3545; /* Default remove button color */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.subject-row button:hover {
+  background-color: #c82333; /* Hover effect */
+}
+
+.add-subject-button {
+  padding: 10px 20px;
+  background-color: #28a745; /* Add subject button color */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.add-subject-button:hover {
+  background-color: #218838; /* Hover effect */
+}
+
+.calculate-button {
+  padding: 10px 20px;
+  background-color: #007bff; /* Calculate button color */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+.calculate-button:hover {
+  background-color: #0056b3; /* Hover effect */
+}
+
+h2 {
+  margin-top: 20px;
+  font-size: 2rem;
+  color: #28a745; /* GPA result color */
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #343a40; /* Darker background */
+  color: #f8f9fa; /* Light text color */
+}
+
+.gpa-calculator-container.dark-mode {
+  background-color: #495057; /* Dark mode background for container */
+  color: #f8f9fa; /* Light text color for container */
+}
+
+.gpa-calculator-container.dark-mode h1 {
+  color: #1a73e8; /* Light heading color in dark mode */
+}
+
+.gpa-calculator-container.dark-mode input {
+  background-color: #6c757d; /* Dark input background */
+  color: #f8f9fa; /* Light input text color */
+  border-color: #adb5bd; /* Light border color */
+}
+
+.gpa-calculator-container.dark-mode .subject-row button {
+  background-color: #c82333; /* Dark mode remove button color */
+}
+
+.gpa-calculator-container.dark-mode .add-subject-button {
+  background-color: #218838; /* Dark mode add subject button color */
+}
+
+.gpa-calculator-container.dark-mode .calculate-button {
+  background-color: #1a73e8; /* Dark mode calculate button color */
+}
+
+.toggle-dark-mode {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #007bff; /* Default toggle button color */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-dark-mode:hover {
+  background-color: #0056b3; /* Hover effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
